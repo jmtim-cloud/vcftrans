@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fbfbfb; /* Warna dasar jika gambar tidak dimuat */
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    /*background-size: cover;*/
+    background-position: center;
+    color: #434343;
+	/* INI KUNCINYA AGAR DIAM */
+    background-attachment: fixed; 
+    
+    /* Tambahan agar background tidak berulang jika konten sangat panjang */
+    background-repeat: no-repeat;
+}
+
+.main-wrapper {
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+}
+.content {
+    padding: 30px;
+	background: #f3f3f3;
+}
+
+/* Logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+.main-logo {
+    max-width: 130px;
+}
+
+/* Profile Card */
+.profile-card {
+    text-align: center;
+	overflow: hidden;
+}
+
+.photo-wrapper {
+	padding: 0;                /* Menghilangkan jarak antara foto dan kotak biru */
+    background: transparent;   /* Memastikan tidak ada warna yang "mengintip" */
+    overflow: hidden;
+}
+
+.profile-photo {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: top;
+	border: none !important;    /* Menghapus garis border */
+    box-shadow: none !important; /* Menghapus bayangan tipis di pinggir */
+    display: block;             /* Menghilangkan celah kecil di bawah gambar */
+    
+}
+
+.profile-info h1 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.profile-info {
+    padding-top: 20px;
+	padding-bottom: 26px;
+}
+.profile-info p {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 30px;
+    background: #bf232a;
+    border-radius: 10px;
+	color: #ffffff;
+}
+
+.contact-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.divider {
+    height: 1px;
+    border-bottom: 1.5px dotted rgba(255, 255, 255, 0.4);
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+}
+
+.contact-item label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-item a, .contact-item p {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.btn-direction {
+    display: flex;           /* Berubah dari inline-flex */
+    align-items: center;
+    justify-content: center; /* Teks & ikon di tengah tombol */
+    gap: 10px;
+    background: #e76711;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    margin: 0 auto 20px auto; /* KUNCI: auto kiri & kanan membuat elemen ke tengah */
+    width: fit-content;      /* Tombol selebar kontennya saja */
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.footer-row, .website {
+    display: flex;
+    flex-direction: column;  /* Menyusun website-link dan tombol secara vertikal */
+    align-items: center;     /* Semua isi di tengah secara horizontal */
+    gap: 20px;               /* Jarak antara link website dan tombol */
+    margin-top: 20px;
+	margin-bottom: 20px;
+    clear: both;
+}
+
+
+
+.website-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.btn-add-contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #e76711;
+    color: white;
+    text-decoration: none;
+    padding: 8px 8px 8px 20px;
+    border-radius: 40px;
+    font-size: 14px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.plus-icon {
+    background: white;
+    color: #e76711;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.btn-langsung {
+    display: flex;            /* Mengaktifkan mode baris */
+    justify-content: center;  /* Mengatur posisi ke tengah secara horizontal */
+    align-items: center;      /* Mengatur posisi ke tengah secara vertikal */
+    gap: 20px;                /* Memberikan jarak antar tombol */
+    padding: 20px 0;           /* Memberikan jarak atas dan bawah */
+}
+
+.btn-langsung a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;              /* Ukuran lebar lingkaran */
+    height: 50px;             /* Ukuran tinggi lingkaran */
+    border-radius: 50%;       /* Membuat bentuk lingkaran sempurna */
+    background-color: #bf232a;
+    color: white;             /* Warna ikon */
+    text-decoration: none;
+    font-size: 24px;          /* Ukuran ikon */
+    transition: transform 0.2s; /* Efek halus saat ditekan */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-langsung a:active {
+    transform: scale(0.9);    /* Efek tombol membal saat diklik di HP */
+}
+
+/* Opsional: Warna berbeda untuk WhatsApp agar lebih kontras 
+.btn-langsung a[href*="wa.me"] {
+    background-color: #25D366; 
+}*/
+
+
+
+
